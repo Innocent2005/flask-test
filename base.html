@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Student Resources{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='logo.png') }}" class="background-logo">
+        <div class="top-logos">
+            <img src="{{ url_for('static', filename='logo.png') }}" class="top-logo">
+            <img src="{{ url_for('static', filename='logo1png') }}" class="top-logo">
+        </div>
+        <div class="title-section" style="text-align: center; margin-top: 20px;">
+            <h1>NATIONAL ASSOCIATION OF IGBO STUDENTS (NAIS)</h1>
+            <h2>FEDERAL UNIVERSITY GUSAU (FUGUS)</h2>
+        </div>
+    </header>
+    
+    <nav>
+        <a href="{{ url_for('tutorials') }}">Tutorial Videos</a>
+        <a href="{{ url_for('past_questions') }}">Past Questions</a>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    <footer>
+        <p>MARVEL DIGITAL WORLD PRODUCTION 2023 </p>
+    </footer>
+</body>
+</html>
